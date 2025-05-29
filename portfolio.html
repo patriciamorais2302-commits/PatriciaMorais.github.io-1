@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Interativo - Patrícia Morais Coutinho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f1f4; /* Rosa bem claro (quase branco) para o fundo geral */
+            color: #333333; /* Cinza Escuro para texto principal */
+        }
+        .nav-link {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #e879f9; /* Rosa vibrante no hover */
+            transform: translateY(-2px);
+        }
+        .section {
+            padding-top: 4rem; /* Espaço para a navbar fixa */
+            padding-bottom: 3rem;
+        }
+        .card {
+            background-color: #FFFFFF; /* Branco para os cards */
+            border-radius: 16px; /* Formas arredondadas */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 6px solid transparent;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(232, 121, 249, 0.2); /* Sombra rosa no hover */
+            border-left-color: #e879f9;
+        }
+        .section-title-icon {
+            color: #e879f9; /* Rosa vibrante para ícones de título */
+            margin-right: 0.75rem;
+            font-size: 1.75rem;
+        }
+        .section-title-text {
+            color: #212121; /* Preto para títulos */
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #f8e1f4; /* Linha rosa clara fluida */
+            display: inline-block;
+        }
+        .image-evidence-container {
+            background-color: #fdf6fa; /* Rosa muito sutil para o fundo das imagens */
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .image-evidence {
+            width: 100%;
+            height: 250px;
+            object-fit: contain; /* ALTERADO: de 'cover' para 'contain' */
+            border-radius: 12px; /* Formas arredondadas */
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .contact-link {
+            transition: color 0.3s ease;
+            color: #e879f9;
+        }
+        .contact-link:hover {
+            color: #212121;
+        }
+        .header-gradient {
+            background: linear-gradient(135deg, #212121 0%, #3a3a3a 100%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="bg-white shadow-md fixed w-full z-20 top-0">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold text-gray-700">Patrícia M. Coutinho</a>
+            <div class="space-x-4">
+                <a href="#sobre-mim" class="nav-link text-gray-600">Sobre Mim</a>
+                <a href="#projetos" class="nav-link text-gray-600">Projetos</a>
+                <a href="#evidencias" class="nav-link text-gray-600">Evidências</a>
+                <a href="#eventos" class="nav-link text-gray-600">Eventos</a>
+                <a href="#competencias" class="nav-link text-gray-600">Competências</a>
+                <a href="#contato" class="nav-link text-gray-600">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="header-gradient text-white pt-32 pb-16 text-center">
+        <div class="container mx-auto px-6">
+            <img src="foto paty.jpeg" alt="Foto de Perfil de Patrícia Morais Coutinho" class="rounded-full w-36 h-36 mx-auto mb-6 border-4 border-white shadow-lg object-cover">
+
+            <h1 class="text-5xl font-bold mb-3">PATRÍCIA MORAIS COUTINHO</h1>
+            <p class="text-2xl font-light mb-6">Consultora Especialista em Gestão de Projetos Sociais</p>
+            <div class="flex justify-center items-center space-x-6 text-lg">
+                <span><i class="fas fa-map-marker-alt mr-2"></i>Goiânia – GO</span>
+                <a href="mailto:patricia_morais@msn.com" class="hover:text-pink-300"><i class="fas fa-envelope mr-2"></i>patricia_morais@msn.com</a>
+                <span><i class="fas fa-phone mr-2"></i>(62) 98250-9669</span>
+                <a href="https://linkedin.com/in/patriciamoraiscoutinho" target="_blank" rel="noopener noreferrer" class="hover:text-pink-300"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <section id="sobre-mim" class="section">
+            <h2 class="text-3xl mb-8 text-center">
+                <i class="fas fa-user-circle section-title-icon"></i><span class="section-title-text">Sobre Mim</span>
+            </h2>
+            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                Profissional com mais de 11 anos de atuação em políticas públicas, avaliação de impacto social e gestão estratégica de programas educacionais. Expertise na análise de dados para apoio à tomada de decisão e na implementação de soluções baseadas em evidências. Experiência consolidada na articulação interinstitucional e liderança de projetos com foco em redução de desigualdades educacionais.
+            </p>
+            <div class="mt-8 text-center">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Metodologias e Ferramentas</h3>
+                <div class="flex flex-wrap justify-center gap-4 text-gray-700">
+                    <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full text-sm font-medium"><i class="fas fa-drafting-compass mr-2"></i>Teoria da Mudança</span>
+                    <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full text-sm font-medium"><i class="fas fa-bullseye-pointer mr-2"></i>Marco Lógico</span>
+                    <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full text-sm font-medium"><i class="fas fa-chart-bar mr-2"></i>Power BI & Power Query</span>
+                    <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full text-sm font-medium"><i class="fas fa-file-excel mr-2"></i>Excel Avançado</span>
+                    <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full text-sm font-medium"><i class="fas fa-tasks mr-2"></i>Gestão Ágil (Kanban, Canvas, Scrum)</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="section bg-white py-12 rounded-2xl my-12 shadow-lg">
+             <h2 class="text-3xl mb-10 text-center">
+                <i class="fas fa-rocket section-title-icon"></i><span class="section-title-text">Principais Projetos e Resultados</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3"><i class="fas fa-graduation-cap text-pink-500 mr-2"></i>Projeto Jovem de Futuro – Instituto Unibanco</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Estruturação de processos de coleta e análise de indicadores (IDEB, SAEB).</li>
+                        <li>Desenvolvimento de painéis e dashboards interativos no Power BI.</li>
+                        <li>Formação de mais de 500 profissionais em análise de dados nas redes de Goiás, Espírito Santo e Ceará.</li>
+                        <li>Goiás alcançou o 1º lugar no IDEB nacional no Ensino Médio.</li>
+                    </ul>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3"><i class="fas fa-school text-pink-500 mr-2"></i>Política de Permanência Escolar – Seduc Goiás</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Implementação da política Bolsa Estudo.</li>
+                        <li>Integração com a estratégia de Busca Ativa Escolar (Unicef) e elaboração / implementação da política de Busca Ativa: acolher para permanecer na rede estadual de Goiás.</li>
+                        <li>Reinserção de milhares de estudantes em situação de vulnerabilidade.</li>
+                    </ul>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3"><i class="fas fa-users text-pink-500 mr-2"></i>Mentoria e Desenvolvimento de Lideranças</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Mentora no Programa Ensina Brasil (2022–2023).</li>
+                        <li>Mentora de trainee na Vetor Brasil: capacitação de jovens gestores públicos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="evidencias" class="section">
+            <h2 class="text-3xl mb-8 text-center">
+                <i class="fas fa-chart-line section-title-icon"></i><span class="section-title-text">Evidências Visuais</span>
+            </h2>
+            <p class="text-lg text-center text-gray-700 mb-10 max-w-2xl mx-auto">Demonstração da aplicação prática de competências em análise e visualização de dados para tomada de decisão estratégica.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="image-evidence-container">
+                    <img src="image_fd3f4f.jpg" alt="Painel de Indicadores - Piauí" class="image-evidence">
+                    <p class="text-center mt-3 font-medium text-gray-700">Painel de Indicadores - Piauí</p>
+                </div>
+                <div class="image-evidence-container">
+                    <img src="image_fd3f2d.png" alt="Painel da Política de Busca Ativa Escolar" class="image-evidence">
+                    <p class="text-center mt-3 font-medium text-gray-700">Painel Política de Busca Ativa Escolar</p>
+                </div>
+                <div class="image-evidence-container">
+                    <img src="image_fd3f36.png" alt="Painel Power BI - Goiás" class="image-evidence">
+                    <p class="text-center mt-3 font-medium text-gray-700">Painel Power BI - Goiás (IDEB)</p>
+                </div>
+                <div class="image-evidence-container">
+                    <img src="image_fd3f31.jpg" alt="Painel de Resultados de Simulados" class="image-evidence">
+                    <p class="text-center mt-3 font-medium text-gray-700">Painel de Resultados de Simulados</p>
+                </div>
+                <div class="image-evidence-container">
+                    <img src="image_fd3f72.jpg" alt="Painel de Indicadores - Espírito Santo" class="image-evidence">
+                    <p class="text-center mt-3 font-medium text-gray-700">Painel de Indicadores - Espírito Santo</p>
+                </div>
+		    <div class="image-evidence-container">
+                    <img src="CE.jpg" alt="Painel do Ceará" class="image-evidence">
+                    <p class="text-center mt-3 font-medium text-gray-700">Painel do Ceará</p>
+               </div>
+           </div> 
+      </section>
+
+        <section id="eventos" class="section bg-white py-12 rounded-2xl my-12 shadow-lg">
+            <h2 class="text-3xl mb-10 text-center">
+                <i class="fas fa-microphone-alt section-title-icon"></i><span class="section-title-text">Participações em Eventos e Mídia</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2"><i class="fas fa-calendar-check text-pink-500 mr-2"></i>Seminário Boas Práticas de Busca Ativa (Goiás)</h3>
+                    <p class="text-gray-600 mb-3">Mediação no seminário do Instituto Unibanco, destacando estratégias para permanência escolar.</p>
+                    <a href="https://www.institutounibanco.org.br/conteudo/boas-praticas-de-busca-ativa-sao-tema-de-seminario-em-goias/" target="_blank" rel="noopener noreferrer" class="font-medium contact-link">Leia mais <i class="fas fa-arrow-right text-xs ml-1"></i></a>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2"><i class="fas fa-desktop text-pink-500 mr-2"></i>Painel "Do Giz ao Digital" (Campus Party Goiás 2024)</h3>
+                    <p class="text-gray-600 mb-3">Palestrante sobre a transição da educação tradicional para a digital.</p>
+                    <a href="https://app.4.events/palestrante-patrcia-morais-coutinho-6091-c18443" target="_blank" rel="noopener noreferrer" class="font-medium contact-link">Detalhes do evento <i class="fas fa-arrow-right text-xs ml-1"></i></a>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2"><i class="fas fa-file-alt text-pink-500 mr-2"></i>Relatório de Atividades do Instituto Unibanco</h3>
+                    <p class="text-gray-600 mb-3">Menção pelo impacto positivo na educação.</p>
+                    <a href=" https://cdnportaliuprd.portalinstitutounibanco.org.br/wp-content/uploads/2021/01/IU_RelatorioAtividades_GO_0312.pdf" class="font-medium contact-link">Acesse o relatório <i class="fas fa-arrow-right text-xs ml-1"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="competencias" class="section">
+            <h2 class="text-3xl mb-8 text-center">
+                <i class="fas fa-star section-title-icon"></i><span class="section-title-text">Competências, Formação e Certificações</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4"><i class="fas fa-lightbulb text-pink-500 mr-2"></i>Competências Diferenciais</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Expertise em metodologias avaliativas</li>
+                        <li>Capacidade de articulação interinstitucional</li>
+                        <li>Experiência com projetos nacionais/regionais</li>
+                        <li>Proficiência em visualização de dados e storytelling</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4"><i class="fas fa-graduation-cap text-pink-500 mr-2"></i>Formação Acadêmica</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Mestrado em Desenvolvimento Regional (UNIALFA, 2024-2026)</li>
+                        <li>MBA em Gestão de Projetos (IPOG, 2014-2015)</li>
+                        <li>Bacharelado em Engenharia de Computação (PUC Goiás, 2000-2004)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4"><i class="fas fa-certificate text-pink-500 mr-2"></i>Certificações e Programas</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>PMD Pro – Gestão de Projetos</li>
+                        <li>Uso de Dados no Setor Público – ENAP</li>
+                        <li>Liderando Mudanças – Inst. Unibanco</li>
+                        <li>Exin Agile Scrum Foundation</li>
+                        <li>Formando Gestores pela Equidade Racial – CEERT</li>
+                        <li>Mentora Programa Ensina Brasil</li>
+                        <li>Mentora Trainee – Vetor Brasil</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section bg-gray-800 text-white py-16 mt-12 rounded-t-2xl">
+            <h2 class="text-3xl mb-8 text-center">
+                <i class="fas fa-envelope-open-text section-title-icon" style="color: #f8e1f4;"></i><span class="section-title-text" style="color: #FFFFFF; border-bottom-color: #e879f9;">Entre em Contato</span>
+            </h2>
+            <div class="text-center max-w-xl mx-auto">
+                <p class="text-lg mb-6 text-gray-300">Disponível para discutir oportunidades de consultoria e projetos de avaliação e gestão de projetos sociais.</p>
+                <div class="space-y-3 text-lg">
+                    <p><a href="mailto:patricia_morais@msn.com" class="hover:text-pink-300"><i class="fas fa-envelope mr-2"></i>patricia_morais@msn.com</a></p>
+                    <p><i class="fas fa-phone mr-2"></i>(62) 98250-9669</p>
+                    <p><a href="https://linkedin.com/in/patriciamoraiscoutinho" target="_blank" rel="noopener noreferrer" class="hover:text-pink-300"><i class="fab fa-linkedin mr-2"></i>linkedin.com/in/patriciamoraiscoutinho</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-6 bg-gray-900 text-gray-400 text-sm">
+        <p>&copy; <span id="currentYear"></span> Patrícia Morais Coutinho. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Offset for fixed navbar
+                    const navbarHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
