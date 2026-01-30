@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patrícia Morais Coutinho | Portfólio</title>
+  <meta name="description" content="Portfólio profissional de Patrícia Morais Coutinho — políticas públicas educacionais, gestão por resultados, monitoramento e avaliação, formação e uso de evidências." />
+  <meta name="theme-color" content="#0B1220" />
+
+  <style>
+    :root{
+      --bg:#0B1220;           /* navy */
+      --bg2:#0E1B33;          /* deeper */
+      --card:#0F213F;         /* card */
+      --surface:#0D1A31;
+      --text:#EAF0FF;
+      --muted:#B9C6E6;
+      --muted2:#93A6D6;
+      --brand:#66E3C4;        /* mint */
+      --brand2:#7AA7FF;       /* blue */
+      --warn:#FFCC66;
+      --ok:#6BE675;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1120px;
+    }
+
+    [data-theme="light"]{
+      --bg:#F6F8FF;
+      --bg2:#EEF2FF;
+      --card:#FFFFFF;
+      --surface:#FFFFFF;
+      --text:#0B1220;
+      --muted:#3B4A72;
+      --muted2:#58699A;
+      --brand:#0AA37A;
+      --brand2:#2563EB;
+      --warn:#B45309;
+      --ok:#15803D;
+      --border:rgba(11,18,32,.10);
+      --shadow: 0 14px 32px rgba(11,18,32,.12);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 10% 0%, rgba(102,227,196,.18), transparent 55%),
+                  radial-gradient(900px 700px at 85% 10%, rgba(122,167,255,.18), transparent 60%),
+                  linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      color:var(--text);
+      line-height:1.5;
+      letter-spacing:.1px;
+    }
+
+    a{color:inherit; text-decoration:none}
+    a:hover{opacity:.92}
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 90px}
+
+    /* Topbar */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--bg) 78%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar .inner{max-width:var(--max); margin:0 auto; padding:14px 18px; display:flex; align-items:center; justify-content:space-between; gap:14px}
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.4px;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px;
+      border:1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 82%, transparent);
+      border-radius: 999px;
+      box-shadow: 0 8px 18px rgba(0,0,0,.12);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .dot{width:8px; height:8px; border-radius:99px; background:linear-gradient(90deg,var(--brand),var(--brand2))}
+
+    nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .navlink{
+      padding:8px 10px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      border:1px solid transparent;
+    }
+    .navlink:hover{border-color:var(--border); background: color-mix(in srgb, var(--card) 70%, transparent)}
+
+    .btn{
+      cursor:pointer;
+      border:1px solid var(--border);
+      background: color-mix(in srgb, var(--card) 86%, transparent);
+      color: var(--text);
+      padding:10px 12px;
+      border-radius: 999px;
+      font-weight:600;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      box-shadow: 0 12px 24px rgba(0,0,0,.12);
+      transition: transform .08s ease;
+      font-size: 13px;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn.primary{
+      border-color: color-mix(in srgb, var(--brand) 40%, var(--border));
+      background: linear-gradient(90deg, color-mix(in srgb, var(--brand) 22%, var(--card)), color-mix(in srgb, var(--brand2) 16%, var(--card)));
+    }
+
+    /* Hero */
+    .hero{padding:34px 0 8px}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.45fr .85fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    @media (max-width: 920px){
+      .grid{grid-template-columns: 1fr;}
+    }
+
+    .card{
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .pad{padding:24px}
+
+    h1{margin:0 0 10px; font-size: 42px; line-height: 1.05; letter-spacing: -.9px}
+    @media (max-width: 520px){h1{font-size: 34px}}
+
+    .subtitle{color:var(--muted); font-size:16px; max-width: 62ch}
+
+    .chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+    .chip{
+      font-size: 12px;
+      padding:8px 10px;
+      border-radius: 999px;
+      border:1px solid var(--border);
+      color: var(--muted);
+      background: color-mix(in srgb, var(--surface) 80%, transparent);
+    }
+
+    .heroActions{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+
+    /* Metrics */
+    .metrics{display:grid; grid-template-columns: repeat(2, 1fr); gap:12px}
+    @media (max-width: 520px){.metrics{grid-template-columns: 1fr}}
+
+    .metric{
+      padding:16px;
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      background: color-mix(in srgb, var(--surface) 84%, transparent);
+    }
+    .metric .k{font-size: 22px; font-weight: 800; letter-spacing: -.5px}
+    .metric .l{color:var(--muted); font-size: 13px; margin-top:4px}
+
+    /* Section */
+    section{margin-top: 26px}
+    .sectionHead{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:12px}
+    .sectionHead h2{margin:0; font-size: 22px; letter-spacing:-.3px}
+    .sectionHead p{margin:0; color:var(--muted); font-size: 13px; max-width:70ch}
+
+    /* Projects */
+    .filters{display:flex; flex-wrap:wrap; gap:8px}
+    .pill{
+      cursor:pointer;
+      user-select:none;
+      font-size:12px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      color:var(--muted);
+      background: color-mix(in srgb, var(--surface) 80%, transparent);
+    }
+    .pill[aria-pressed="true"]{
+      color: var(--text);
+      border-color: color-mix(in srgb, var(--brand) 50%, var(--border));
+      background: linear-gradient(90deg, color-mix(in srgb, var(--brand) 20%, var(--card)), color-mix(in srgb, var(--brand2) 14%, var(--card)));
+    }
+
+    .cards{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
+    @media (max-width: 920px){.cards{grid-template-columns: 1fr}}
+
+    .proj{
+      border:1px solid var(--border);
+      border-radius: var(--radius2);
+      background: color-mix(in srgb, var(--surface) 86%, transparent);
+      overflow:hidden;
+    }
+    .projTop{padding:18px 18px 12px}
+    .projTitle{display:flex; gap:10px; align-items:flex-start; justify-content:space-between}
+    .projTitle h3{margin:0; font-size:16px}
+    .tagrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{font-size:11px; padding:6px 8px; border-radius:999px; border:1px solid var(--border); color:var(--muted)}
+    .projBody{padding:0 18px 14px; color:var(--muted); font-size:13px}
+
+    details{border-top:1px solid var(--border)}
+    summary{
+      cursor:pointer;
+      list-style:none;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color:var(--text);
+      font-weight:700;
+      font-size: 13px;
+    }
+    summary::-webkit-details-marker{display:none}
+    .chev{opacity:.8}
+    details[open] .chev{transform: rotate(180deg)}
+
+    .detailPad{padding:0 18px 18px; color:var(--muted); font-size:13px}
+    .detailPad ul{margin:10px 0 0; padding-left: 18px}
+    .detailPad li{margin:6px 0}
+
+    /* Gallery */
+    .gallery{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
+    @media (max-width: 920px){.gallery{grid-template-columns: repeat(2, 1fr)}}
+    @media (max-width: 520px){.gallery{grid-template-columns: 1fr}}
+
+    .shot{
+      border:1px solid var(--border);
+      border-radius: var(--radius2);
+      overflow:hidden;
+      background: color-mix(in srgb, var(--surface) 86%, transparent);
+      cursor: zoom-in;
+    }
+    .shot img{width:100%; display:block}
+    .shot .cap{padding:10px 12px; font-size: 12px; color: var(--muted)}
+
+    /* Media & Talks */
+    .list{display:grid; grid-template-columns: 1fr; gap:10px}
+    .item{
+      border:1px solid var(--border);
+      border-radius: var(--radius2);
+      background: color-mix(in srgb, var(--surface) 86%, transparent);
+      padding:14px 14px;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      justify-content:space-between;
+    }
+    .item strong{display:block; margin-bottom:4px}
+    .item .meta{color:var(--muted); font-size:12px}
+    .item .right{display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
+
+    /* Footer */
+    footer{margin-top:26px; color:var(--muted); font-size:12px; text-align:center}
+
+    /* Modal */
+    .modal{
+      position:fixed; inset:0; display:none; align-items:center; justify-content:center;
+      background: rgba(0,0,0,.55);
+      padding: 20px;
+      z-index: 50;
+    }
+    .modal[aria-hidden="false"]{display:flex}
+    .modalCard{
+      width:min(980px, 100%);
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border:1px solid var(--border);
+      background: var(--card);
+      box-shadow: 0 30px 70px rgba(0,0,0,.55);
+    }
+    .modalTop{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; border-bottom:1px solid var(--border)}
+    .modalTop .t{font-weight:800}
+    .modalTop .x{cursor:pointer; border:1px solid var(--border); padding:8px 10px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 70%, transparent)}
+    .modalImg{width:100%; display:block}
+
+    /* Helpers */
+    .muted{color:var(--muted)}
+    .split{display:flex; gap:10px; flex-wrap:wrap}
+    .sr{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Patrícia Morais Coutinho</span>
+        <span class="badge"><span class="dot" aria-hidden="true" style="width:6px;height:6px"></span> Políticas públicas • Evidências • Implementação</span>
+      </div>
+      <nav aria-label="Navegação">
+        <a class="navlink" href="#sobre">Sobre</a>
+        <a class="navlink" href="#impacto">Impacto</a>
+        <a class="navlink" href="#projetos">Projetos</a>
+        <a class="navlink" href="#evidencias">Evidências</a>
+        <a class="navlink" href="#midia">Mídia & Eventos</a>
+        <a class="navlink" href="#contato">Contato</a>
+        <button class="btn" id="themeBtn" type="button" aria-label="Alternar tema">
+          <span aria-hidden="true">🌓</span> Tema
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="topo">
+      <div class="grid">
+        <div class="card">
+          <div class="pad">
+            <h1>Gestão educacional em escala, com evidências e foco em equidade.</h1>
+            <p class="subtitle">
+              Atuação em <strong>políticas públicas educacionais</strong>, <strong>gestão por resultados</strong> e <strong>monitoramento & avaliação (M&A)</strong>,
+              conectando <strong>currículo</strong>, <strong>formação</strong> e <strong>dados</strong> para acelerar aprendizagem e permanência.
+            </p>
+
+            <div class="chips" aria-label="Áreas de atuação">
+              <span class="chip">Gestão por Resultados (GPR/PDCA)</span>
+              <span class="chip">Implementação de políticas</span>
+              <span class="chip">Monitoramento & Avaliação (M&A)</span>
+              <span class="chip">Indicadores (SAEB/IDEB/fluxo)</span>
+              <span class="chip">Formação continuada</span>
+              <span class="chip">Power BI • Excel • QEdu • Educacenso</span>
+              <span class="chip">Teoria da Mudança • Marco Lógico</span>
+              <span class="chip">Gestão de Projetos (PMO)</span>
+            </div>
+
+            <div class="heroActions">
+              <a class="btn primary" href="#contato">📩 Falar comigo</a>
+              <a class="btn" href="#projetos">🧭 Ver projetos</a>
+              <a class="btn" href="#midia">🎤 Mídia & palestras</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card" id="impacto">
+          <div class="pad">
+            <div class="sectionHead" style="margin-bottom:10px">
+              <h2>Impacto em números</h2>
+              <p>Seleção de entregas e resultados (editável conforme necessidade).</p>
+            </div>
+
+            <div class="metrics" role="list">
+              <div class="metric" role="listitem">
+                <div class="k">11+ anos</div>
+                <div class="l">Políticas públicas, gestão e avaliação em educação</div>
+              </div>
+              <div class="metric" role="listitem">
+                <div class="k">~300</div>
+                <div class="l">Escolas priorizadas (critérios de abandono, proficiência e aprovação)</div>
+              </div>
+              <div class="metric" role="listitem">
+                <div class="k">16% → 8%</div>
+                <div class="l">Contribuição na redução da evasão (Censo Escolar, 2020–2024)</div>
+              </div>
+              <div class="metric" role="listitem">
+                <div class="k">500+</div>
+                <div class="l">Profissionais formados(as) em uso de dados/gestão</div>
+              </div>
+            </div>
+
+            <div style="margin-top:12px" class="split">
+              <a class="btn" href="https://www.linkedin.com/in/patriciamoraiscoutinho" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+              <button class="btn" id="copyEmail" type="button">📋 Copiar e-mail</button>
+            </div>
+            <p class="muted" style="margin:10px 0 0; font-size:12px">Dica: personalize os números conforme o cargo e a audiência.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="sectionHead">
+        <div>
+          <h2>Sobre</h2>
+          <p>
+            Perfil híbrido entre <strong>gestão pública</strong> e <strong>ciência de dados aplicada à educação</strong>.
+            Experiência em desenho e implementação de políticas, governança, formação e monitoramento — com foco em <strong>equidade</strong>,
+            <strong>redução de evasão</strong> e <strong>melhoria de aprendizagem</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="proj">
+          <div class="projTop">
+            <div class="projTitle">
+              <h3>O que eu entrego</h3>
+              <span class="badge">da estratégia à execução</span>
+            </div>
+            <div class="projBody">
+              <ul>
+                <li><strong>Estratégia e desenho</strong>: Teoria da Mudança, marco lógico, desenho de programa e critérios de priorização.</li>
+                <li><strong>Gestão por resultados</strong>: KPIs, painéis, ritos (semanal/mensal), planos de ação e devolutivas para unidades.</li>
+                <li><strong>M&A e evidências</strong>: análises de SAEB/IDEB/fluxo, sínteses executivas e recomendações de decisão.</li>
+                <li><strong>Formação e materiais</strong>: trilhas, ementas, instrumentos de avaliação e apoio à implementação em rede.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj">
+          <div class="projTop">
+            <div class="projTitle">
+              <h3>Ferramentas & métodos</h3>
+              <span class="badge">hands-on</span>
+            </div>
+            <div class="projBody">
+              <div class="tagrow">
+                <span class="tag">Power BI</span>
+                <span class="tag">Power Query</span>
+                <span class="tag">Excel avançado</span>
+                <span class="tag">QEdu</span>
+                <span class="tag">Educacenso</span>
+                <span class="tag">SAEB/IDEB</span>
+                <span class="tag">SEI</span>
+                <span class="tag">PDCA</span>
+                <span class="tag">Kanban</span>
+                <span class="tag">Canvas/Scrum</span>
+                <span class="tag">Teoria da Mudança</span>
+                <span class="tag">Marco Lógico</span>
+              </div>
+              <p style="margin:12px 0 0">Também atuo com facilitação, comunicação executiva e desenho de governança intersetorial.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <div class="sectionHead">
+        <div>
+          <h2>Projetos e realizações</h2>
+          <p>Filtre por tema. Clique em “Detalhes” para ver entregáveis, métodos e resultados.</p>
+        </div>
+        <div class="filters" aria-label="Filtros de projetos">
+          <button class="pill" type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="pill" type="button" data-filter="politicas" aria-pressed="false">Políticas públicas</button>
+          <button class="pill" type="button" data-filter="gpr" aria-pressed="false">Gestão por resultados</button>
+          <button class="pill" type="button" data-filter="ma" aria-pressed="false">M&A</button>
+          <button class="pill" type="button" data-filter="dados" aria-pressed="false">Dados & BI</button>
+          <button class="pill" type="button" data-filter="formacao" aria-pressed="false">Formação</button>
+        </div>
+      </div>
+
+      <div class="cards" id="projectGrid">
+        <!-- Project 1 -->
+        <article class="proj" data-tags="politicas,gpr,ma">
+          <div class="projTop">
+            <div class="projTitle">
+              <h3>Governança da política educacional (rede estadual)</h3>
+              <span class="badge"><span class="dot" aria-hidden="true" style="width:6px;height:6px"></span> gestão em escala</span>
+            </div>
+            <div class="tagrow">
+              <span class="tag">PEE • PPA • Plano de Governo</span>
+              <span class="tag">Ritos semanais/mensais</span>
+              <span class="tag">SEI</span>
+              <span class="tag">Accountability</span>
+            </div>
+            <div class="projBody">
+              Estruturação de governança, desdobramento de metas e rotinas de acompanhamento para CREs e escolas.
+            </div>
+          </div>
+          <details>
+            <summary>
+              Detalhes <span class="chev" aria-hidden="true">▾</span>
+            </summary>
+            <div class="detailPad">
+              <ul>
+                <li>Alinhamento de diretrizes e metas (aprendizagem e fluxo) com instrumentos de planejamento público.</li>
+                <li>Ritos de gestão: pauta, indicadores, devolutivas e registro formal; planos de ação com responsáveis e prazos.</li>
+                <li>Monitoramento contínuo com sínteses executivas para tomada de decisão.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="proj" data-tags="politicas,ma,gpr">
+          <div class="projTop">
+            <div class="projTitle">
+              <h3>Políticas de permanência e Busca Ativa</h3>
+              <span class="badge" style="color:var(--ok)">foco em fluxo</span>
+            </div>
+            <div class="tagrow">
+              <span class="tag">Permanência</span>
+              <span class="tag">Busca ativa</span>
+              <span class="tag">Assistência estudantil</span>
+              <span class="tag">Fluxo escolar</span>
+            </div>
+            <div class="projBody">
+              Integração entre gestão escolar, assistência estudantil e dados para acompanhar estudantes em risco.
+            </div>
+          </div>
+          <details>
+            <summary>Detalhes <span class="chev" aria-hidden="true">▾</span></summary>
+            <div class="detailPad">
+              <ul>
+                <li>Modelagem de rotinas para identificação, acompanhamento e reinserção de estudantes.</li>
+                <li>Indicadores de alerta e governança intersetorial; devolutivas para unidades e CREs.</li>
+                <li>Contribuição na redução da evasão de <strong>16% para 8%</strong> (Censo Escolar, 2020–2024).</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="proj" data-tags="politicas,ma">
+          <div class="projTop">
+            <div class="projTitle">
+              <h3>Desenho e implementação de programa estratégico</h3>
+              <span class="badge" style="color:var(--warn)">do desenho ao lançamento</span>
+            </div>
+            <div class="tagrow">
+              <span class="tag">Critérios</span>
+              <span class="tag">Portarias</span>
+              <span class="tag">Prestação de contas</span>
+              <span class="tag">Governança intersetorial</span>
+            </div>
+            <div class="projBody">
+              Estruturação normativa e governança de programa, com monitoramento por indicadores.
+            </div>
+          </div>
+          <details>
+            <summary>Detalhes <span class="chev" aria-hidden="true">▾</span></summary>
+            <div class="detailPad">
+              <ul>
+                <li>Definição de elegibilidade, critérios operacionais e mecanismos de acompanhamento.</li>
+                <li>Modelo de M&A e rotinas de prestação de contas orientadas por evidências.</li>
+                <li>Gestão de stakeholders e comunicação executiva para implementação em rede.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="proj" data-tags="dados,ma,gpr">
+          <div class="projTop">
+            <div class="projTitle">
+              <h3>Painéis e inteligência de dados para decisão</h3>
+              <span class="badge">BI & Storytelling</span>
+            </div>
+            <div class="tagrow">
+              <span class="tag">Power BI</span>
+              <span class="tag">Power Query</span>
+              <span class="tag">Indicadores</span>
+              <span class="tag">Diagnóstico</span>
+            </div>
+            <div class="projBody">
+              Dashboards e rotinas de análise para priorização, monitoramento e devolutiva às unidades.
+            </div>
+          </div>
+          <details>
+            <summary>Detalhes <span class="chev" aria-hidden="true">▾</span></summary>
+            <div class="detailPad">
+              <ul>
+                <li>Integração de bases (Educacenso, QEdu e sistemas internos) para leitura de rede.</li>
+                <li>Painéis por etapa/território/unidade, com métricas de aprendizagem, fluxo e participação.</li>
+                <li>Documentação e padronização de indicadores para consistência e comparabilidade.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="proj" data-tags="formacao,dados">
+          <div class="projTop">
+            <div class="projTitle">
+              <h3>Formação e desenvolvimento de capacidades</h3>
+              <span class="badge">adult learning</span>
+            </div>
+            <div class="tagrow">
+              <span class="tag">Formação continuada</span>
+              <span class="tag">Gestão pedagógica</span>
+              <span class="tag">Uso de dados</span>
+              <span class="tag">Mentoria</span>
+            </div>
+            <div class="projBody">
+              Concepção e facilitação de formações para gestores, coordenadores e professores.
+            </div>
+          </div>
+          <details>
+            <summary>Detalhes <span class="chev" aria-hidden="true">▾</span></summary>
+            <div class="detailPad">
+              <ul>
+                <li>Trilhas formativas (ementas, objetivos, instrumentos) e acompanhamento por indicadores.</li>
+                <li>Capacitação de <strong>500+</strong> profissionais em leitura de indicadores e tomada de decisão.</li>
+                <li>Mentoria em programas de liderança e desenvolvimento de talentos no setor público.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="proj" data-tags="gpr,politicas">
+          <div class="projTop">
+            <div class="projTitle">
+              <h3>Estratégia de escolas prioritárias</h3>
+              <span class="badge">foco e escala</span>
+            </div>
+            <div class="tagrow">
+              <span class="tag">Priorização</span>
+              <span class="tag">LP/Mat</span>
+              <span class="tag">Abandono</span>
+              <span class="tag">Aprovação</span>
+            </div>
+            <div class="projBody">
+              Definição de critérios e pactuação de planos de ação com CREs e unidades escolares.
+            </div>
+          </div>
+          <details>
+            <summary>Detalhes <span class="chev" aria-hidden="true">▾</span></summary>
+            <div class="detailPad">
+              <ul>
+                <li>Seleção de ~<strong>300</strong> unidades com base em abandono, proficiência e taxa de aprovação.</li>
+                <li>Planos de ação com responsáveis, metas intermediárias e ritos de acompanhamento.</li>
+                <li>Devolutivas orientadas por evidências para apoiar gestão escolar e territorial.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section id="evidencias">
+      <div class="sectionHead">
+        <div>
+          <h2>Evidências visuais</h2>
+          <p>Exemplos de painéis e visualizações (clique para ampliar). Substitua/adicione imagens conforme seu acervo.</p>
+        </div>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <figure class="shot" data-title="Painel / Evidência 1">
+          <img src="image_fd3f2d.png" alt="Painel / Evidência 1" loading="lazy" />
+          <figcaption class="cap">Painel / Evidência 1</figcaption>
+        </figure>
+        <figure class="shot" data-title="Painel / Evidência 2">
+          <img src="image_fd3f36.png" alt="Painel / Evidência 2" loading="lazy" />
+          <figcaption class="cap">Painel / Evidência 2</figcaption>
+        </figure>
+        <figure class="shot" data-title="Painel / Evidência 3">
+          <img src="image_fd3f31.jpg" alt="Painel / Evidência 3" loading="lazy" />
+          <figcaption class="cap">Painel / Evidência 3</figcaption>
+        </figure>
+        <figure class="shot" data-title="Painel / Evidência 4">
+          <img src="image_fd3f4f.jpg" alt="Painel / Evidência 4" loading="lazy" />
+          <figcaption class="cap">Painel / Evidência 4</figcaption>
+        </figure>
+        <figure class="shot" data-title="Painel / Evidência 5">
+          <img src="image_fd3f72.jpg" alt="Painel / Evidência 5" loading="lazy" />
+          <figcaption class="cap">Painel / Evidência 5</figcaption>
+        </figure>
+        <figure class="shot" data-title="Painel / Evidência 6">
+          <img src="CE.jpg" alt="Painel / Evidência 6" loading="lazy" />
+          <figcaption class="cap">Painel / Evidência 6</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="midia">
+      <div class="sectionHead">
+        <div>
+          <h2>Mídia, entrevistas e eventos</h2>
+          <p>Seleção de participações públicas. Atualize com novos links quando quiser.</p>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item">
+          <div>
+            <strong>Livro “A Educação não Parou” — Fundação Santillana / CONSED</strong>
+            <div class="meta">Menção/entrevista sobre ações educacionais durante a pandemia (2023).</div>
+          </div>
+          <div class="right">
+            <a class="btn" href="https://www.fundacaosantillana.org.br/wp-content/uploads/2023/09/A_educacao_nao_parou_digital.pdf" target="_blank" rel="noreferrer">📄 Ver publicação</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>
+            <strong>Entrevista sobre IDEB — Sagres 730</strong>
+            <div class="meta">Comentário técnico sobre resultados e contexto do IDEB (2022).</div>
+          </div>
+          <div class="right">
+            <a class="btn" href="https://sagresonline.com.br/resultado-e-para-se-comemorar-diz-seduc-go-sobre-numeros-do-ideb/" target="_blank" rel="noreferrer">▶️ Abrir</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>
+            <strong>Programa de rádio — "O Mundo em sua Casa" (Brasil Central)</strong>
+            <div class="meta">Entrevista sobre políticas de apoio/alimentação escolar durante suspensão de aulas presenciais (2021).</div>
+          </div>
+          <div class="right">
+            <a class="btn" href="https://goias.gov.br/abc/seduc-inicia-segunda-entrega-de-kits-de-alimentacao-para-alunos-da-rede-estadual-de-ensino/" target="_blank" rel="noreferrer">📰 Matéria</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>
+            <strong>Campus Party Goiás — programação</strong>
+            <div class="meta">Participação em programação com painel/mesa de debate sobre educação e tecnologia (referência pública no site do evento).</div>
+          </div>
+          <div class="right">
+            <a class="btn" href="https://brasil.campus-party.org/cpgoias4/programacao/" target="_blank" rel="noreferrer">🎤 Programação</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px" class="card">
+        <div class="pad">
+          <div class="sectionHead" style="margin-bottom:10px">
+            <h2 style="font-size:18px">Quer me convidar para aula/palestra?</h2>
+            <p>Temas mais demandados em pós e formações para redes.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">Gestão por Resultados (Falconi/PDCA)</span>
+            <span class="chip">Políticas públicas educacionais</span>
+            <span class="chip">M&A: desenho, indicadores e evidências</span>
+            <span class="chip">Uso de dados na gestão (Power BI)</span>
+            <span class="chip">Permanência, evasão e fluxo escolar</span>
+            <span class="chip">Governança e implementação em escala</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="sectionHead">
+        <div>
+          <h2>Contato</h2>
+          <p>Aberta a consultorias, docência em pós-graduação, mentorias e projetos de avaliação/implementação.</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="proj">
+          <div class="projTop">
+            <div class="projTitle">
+              <h3>Vamos conversar</h3>
+              <span class="badge">resposta rápida</span>
+            </div>
+            <div class="projBody">
+              <p style="margin:10px 0 12px"><strong>E-mail:</strong> <span id="emailText">patricia_morais@msn.com</span><br/>
+                <strong>Telefone:</strong> +55 (62) 98250-9669</p>
+              <div class="split">
+                <a class="btn primary" href="mailto:patricia_morais@msn.com?subject=Contato%20-%20Portf%C3%B3lio%20Patr%C3%ADcia%20Morais%20Coutinho">📩 Enviar e-mail</a>
+                <a class="btn" href="https://www.linkedin.com/in/patriciamoraiscoutinho" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+              </div>
+              <p class="muted" style="margin:12px 0 0">Sugestão: inclua 2–3 linhas com contexto, objetivo e prazo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj">
+          <div class="projTop">
+            <div class="projTitle">
+              <h3>Download rápido</h3>
+              <span class="badge">opcional</span>
+            </div>
+            <div class="projBody">
+              <p style="margin:10px 0 12px">Adicione aqui links para seu CV em PDF e portfólios de slides (sem informações sensíveis).</p>
+              <div class="split">
+                <a class="btn" href="#" onclick="return false;">⬇️ Currículo (PDF)</a>
+                <a class="btn" href="#" onclick="return false;">📊 Portfólio de slides</a>
+              </div>
+              <p class="muted" style="margin:12px 0 0">Dica: evite dados confidenciais e identifique apenas o tipo de projeto/entregável.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Patrícia Morais Coutinho • Portfólio
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visualizador de imagem">
+    <div class="modalCard">
+      <div class="modalTop">
+        <div class="t" id="modalTitle">Imagem</div>
+        <button class="x" id="modalClose" type="button" aria-label="Fechar">✕</button>
+      </div>
+      <img class="modalImg" id="modalImg" alt="" />
+    </div>
+  </div>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if(!href || href === '#') return;
+        const target = document.querySelector(href);
+        if(!target) return;
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+    // Theme toggle (persist)
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('themeBtn');
+    const savedTheme = localStorage.getItem('pmc_theme');
+    if(savedTheme) root.setAttribute('data-theme', savedTheme);
+
+    themeBtn.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'light' ? '' : 'light';
+      if(next) root.setAttribute('data-theme', next); else root.removeAttribute('data-theme');
+      localStorage.setItem('pmc_theme', next || '');
+    });
+
+    // Copy email
+    const copyEmailBtn = document.getElementById('copyEmail');
+    copyEmailBtn?.addEventListener('click', async () => {
+      const email = document.getElementById('emailText')?.textContent?.trim() || 'patricia_morais@msn.com';
+      try{
+        await navigator.clipboard.writeText(email);
+        copyEmailBtn.textContent = '✅ E-mail copiado';
+        setTimeout(() => copyEmailBtn.textContent = '📋 Copiar e-mail', 1600);
+      }catch{
+        copyEmailBtn.textContent = 'Copie manualmente';
+        setTimeout(() => copyEmailBtn.textContent = '📋 Copiar e-mail', 1600);
+      }
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Project filters
+    const pills = Array.from(document.querySelectorAll('.pill'));
+    const cards = Array.from(document.querySelectorAll('#projectGrid .proj'));
+
+    function setActive(filter){
+      pills.forEach(p => p.setAttribute('aria-pressed', String(p.dataset.filter === filter)));
+      cards.forEach(c => {
+        const tags = (c.dataset.tags || '').split(',').map(s => s.trim());
+        const show = filter === 'all' || tags.includes(filter);
+        c.style.display = show ? '' : 'none';
+      });
+    }
+
+    pills.forEach(p => p.addEventListener('click', () => setActive(p.dataset.filter)));
+
+    // Gallery modal
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalClose = document.getElementById('modalClose');
+
+    function openModal(src, title, alt){
+      modalTitle.textContent = title || 'Imagem';
+      modalImg.src = src;
+      modalImg.alt = alt || title || '';
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+      modalClose.focus();
+    }
+
+    function closeModal(){
+      modal.setAttribute('aria-hidden','true');
+      modalImg.src='';
+      document.body.style.overflow='';
+    }
+
+    document.querySelectorAll('#gallery .shot').forEach(fig => {
+      fig.addEventListener('click', () => {
+        const img = fig.querySelector('img');
+        if(!img) return;
+        openModal(img.src, fig.dataset.title, img.alt);
+      });
+    });
+
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+  </script>
+</body>
+</html>
